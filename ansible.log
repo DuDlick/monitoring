@@ -1,0 +1,86 @@
+2023-08-12 15:22:50,818 p=26769 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host  port 22: Connection refused",
+    "unreachable": true
+}
+2023-08-12 15:22:50,819 p=26769 u=dudlick n=ansible | monitoring1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host  port 22: Connection refused",
+    "unreachable": true
+}
+2023-08-12 15:25:17,364 p=26824 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host  port 22: Connection refused",
+    "unreachable": true
+}
+2023-08-12 15:25:17,484 p=26824 u=dudlick n=ansible | monitoring1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: danik@192.168.51.139: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2023-08-12 15:25:29,834 p=26842 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host  port 22: Connection refused",
+    "unreachable": true
+}
+2023-08-12 15:25:29,970 p=26842 u=dudlick n=ansible | monitoring1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: root@192.168.51.139: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2023-08-12 15:25:48,482 p=26859 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host  port 22: Connection refused",
+    "unreachable": true
+}
+2023-08-12 15:25:48,619 p=26859 u=dudlick n=ansible | monitoring1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: root@192.168.51.139: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2023-08-12 15:25:55,413 p=26873 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host  port 22: Connection refused",
+    "unreachable": true
+}
+2023-08-12 15:25:55,544 p=26873 u=dudlick n=ansible | monitoring1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: danik@192.168.51.139: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2023-08-12 15:27:15,154 p=26900 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host  port 22: Connection refused",
+    "unreachable": true
+}
+2023-08-12 15:27:15,781 p=26900 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 15:27:54,485 p=26933 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host  port 22: Connection refused",
+    "unreachable": true
+}
+2023-08-12 15:27:54,739 p=26933 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 15:28:03,874 p=26955 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host  port 22: Connection refused",
+    "unreachable": true
+}
+2023-08-12 15:28:04,079 p=26955 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 15:28:05,311 p=26971 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host  port 22: Connection refused",
+    "unreachable": true
+}
+2023-08-12 15:28:05,548 p=26971 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}

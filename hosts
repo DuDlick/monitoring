@@ -1,5 +1,11 @@
 [prod]
-prod1 ansible_host=
+prod1 ansible_host= ansible_port=22 ansible_connection=ssh
 
 [monitoring]
-monitoring1 ansible_host=
+monitoring1 ansible_host=192.168.51.139 
+
+[monitoring:vars]
+ansible_port=22 
+ansible_connection=ssh 
+ansible_user=danik 
+ansible_sudo_pass='qwerty' 
