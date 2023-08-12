@@ -11,6 +11,11 @@
     dest: '/var/monitoring/docker-compose.yaml'
     mode: '0744'
 
+- name: Start monitoring docker Compose
+  command: docker-compose up -d
+  args:
+    chdir: /var/monitoring/docker-compose.yaml
+
 - name: ip facts
   ansible.builtin.set_fact:
     target_ip: "{{ hostvars['prod1']['ansible_host'] }}"
@@ -31,3 +36,8 @@
     regexp: 'targets: \[\:8080\]'
     replace: 'targets: [{{ target_ip }}:8080]'
 
+- name: Replace Server with {{ ansible_host }}
+  replace:
+    path: "/var/monitoring/prometheus/prometheus.yaml"
+    regexp: 'targets: \[\:9100\]'
+    replace: 'targets: [{{ target_ip }}:9100]'
