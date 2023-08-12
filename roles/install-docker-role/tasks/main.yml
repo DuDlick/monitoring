@@ -21,6 +21,9 @@
     name: 'docker-ce'
     state: latest
     update_cache: true
+  notify: 
+    - docker start
+    - docker enable
 
 - name: Install docker-compose
   get_url:

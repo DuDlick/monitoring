@@ -1,2 +1,17 @@
 ---
 # handlers file for install-docker-role
+
+- name: docker reload
+  systemd:
+    name: docker
+    state: reloaded
+
+- name: docker start
+  systemd:
+    name: docker
+    state: start
+
+- name: docker enable
+  systemd:
+    name: docker
+    enabled: true
