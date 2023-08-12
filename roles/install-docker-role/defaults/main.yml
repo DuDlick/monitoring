@@ -1,0 +1,16 @@
+---
+# defaults file for install-docker-role
+all_packages:
+  - curl
+  - wget
+  - vim
+  - net-tools
+  - mc
+  - htop
+  - apt-transport-https 
+  - ca-certificates 
+  - python3-setuptools
+  - python3-pip
+  - software-properties-common
+  - virtualenv
+  - expect

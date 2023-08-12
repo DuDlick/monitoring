@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  
+    node_exporter:
+      image: quay.io/prometheus/node-exporter:latest
+      container_name: node_exporter
+      command:
+        - '--path.rootfs=/host'
+      network_mode: host
+      pid: host
+      restart: unless-stopped
+      volumes:
+        - '/:/host:ro,rslave'
+      ports:
+        - 9100:9100
+      networks:
+        exporter:
+          ipv4_address: 172.28.0.4
+
+    java_app:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      depends_on: 
+        - node_exporter
+      restart: unless-stopped
+
+networks:
+  exporter:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
+          gateway: 172.28.0.1

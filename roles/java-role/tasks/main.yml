@@ -1,0 +1,40 @@
+---
+# tasks file for java-role
+
+- name: Install software
+  apt:
+    update_cache: yes
+    name: "{{ all_packages }}"
+    state: latest
+
+- name: Add Docker GPG apt Key
+  apt_key:
+    url: 'https://download.docker.com/linux/ubuntu/gpg'
+    state: present
+
+- name: Add Docker Repository
+  apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu jammy stable
+    state: present
+
+- name: apt update and install docker 
+  apt:
+    name: 'docker-ce'
+    state: latest
+    update_cache: true
+
+- name: Install docker-compose
+  get_url:
+    url: 'https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-linux-aarch64'
+    dest: /usr/local/bin/docker-compose
+    mode: '0555'
+
+- name: install docker module
+  pip:
+    name: docker
+    state: latest
+
+- name: Start nginx Docker Compose
+  command: docker-compose up -d
+  args:
+    chdir: /opt/docker-compose.yml

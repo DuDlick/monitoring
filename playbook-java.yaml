@@ -1,0 +1,8 @@
+---
+- name: java role
+  hosts: monitoring
+  become: true
+  gather_facts: false
+  roles: 
+    - install-docker-role
+    - java-role
