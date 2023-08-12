@@ -1,6 +1,6 @@
-all: test-ansible java monitoring
+all: java monitoring
 
-test-ansible:
+test:
 	ansible all -m ping
 	ansible --version	
 	python3 --version

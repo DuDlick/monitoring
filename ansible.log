@@ -779,3 +779,91 @@ The offending line appears to be:
 2023-08-12 17:15:23,106 p=30305 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"changed": false, "cmd": ["docker-compose", "up", "-d"], "delta": null, "end": null, "msg": "Unable to change directory before execution: [Errno 2] No such file or directory: b'/var/app/docker-compose.yaml'", "rc": null, "start": null, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
 2023-08-12 17:15:23,107 p=30305 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
 2023-08-12 17:15:23,107 p=30305 u=dudlick n=ansible | monitoring1                : ok=8    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 20:24:43,198 p=31838 u=dudlick n=ansible | prod1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 20:24:55,160 p=31838 u=dudlick n=ansible | monitoring1 | FAILED! => {
+    "msg": "Timeout (12s) waiting for privilege escalation prompt: "
+}
+2023-08-12 20:25:23,124 p=31879 u=dudlick n=ansible | prod1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 20:25:35,070 p=31879 u=dudlick n=ansible | monitoring1 | FAILED! => {
+    "msg": "Timeout (12s) waiting for privilege escalation prompt: "
+}
+2023-08-12 20:27:27,744 p=31924 u=dudlick n=ansible | ansible [core 2.15.2]
+  config file = /Users/dudlick/my_dir/projects/monitoring/ansible.cfg
+  configured module search path = ['/Users/dudlick/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /opt/homebrew/lib/python3.11/site-packages/ansible
+  ansible collection location = /Users/dudlick/.ansible/collections:/usr/share/ansible/collections
+  executable location = /opt/homebrew/bin/ansible
+  python version = 3.11.4 (main, Jun 20 2023, 17:23:00) [Clang 14.0.3 (clang-1403.0.22.14.1)] (/opt/homebrew/opt/python@3.11/bin/python3.11)
+  jinja version = 3.1.2
+  libyaml = True
+2023-08-12 20:27:27,744 p=31924 u=dudlick n=ansible | Using /Users/dudlick/my_dir/projects/monitoring/ansible.cfg as config file
+2023-08-12 20:27:27,793 p=31924 u=dudlick n=ansible | host_list declined parsing /Users/dudlick/my_dir/projects/monitoring/hosts as it did not pass its verify_file() method
+2023-08-12 20:27:27,793 p=31924 u=dudlick n=ansible | script declined parsing /Users/dudlick/my_dir/projects/monitoring/hosts as it did not pass its verify_file() method
+2023-08-12 20:27:27,793 p=31924 u=dudlick n=ansible | auto declined parsing /Users/dudlick/my_dir/projects/monitoring/hosts as it did not pass its verify_file() method
+2023-08-12 20:27:27,795 p=31924 u=dudlick n=ansible | Parsed /Users/dudlick/my_dir/projects/monitoring/hosts inventory source with ini plugin
+2023-08-12 20:27:27,811 p=31924 u=dudlick n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2023-08-12 20:27:27,811 p=31924 u=dudlick n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2023-08-12 20:27:27,811 p=31924 u=dudlick n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2023-08-12 20:27:27,865 p=31924 u=dudlick n=ansible | <192.168.51.128> ESTABLISH SSH CONNECTION FOR USER: dudlick
+2023-08-12 20:27:27,866 p=31924 u=dudlick n=ansible | <192.168.51.128> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="dudlick"' -o ConnectTimeout=10 -o 'ControlPath="/Users/dudlick/.ansible/cp/4f72abf461"' 192.168.51.128 '/bin/sh -c '"'"'echo ~dudlick && sleep 0'"'"''
+2023-08-12 20:27:27,867 p=31924 u=dudlick n=ansible | <192.168.51.139> ESTABLISH SSH CONNECTION FOR USER: danik
+2023-08-12 20:27:27,867 p=31924 u=dudlick n=ansible | <192.168.51.139> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="danik"' -o ConnectTimeout=10 -o 'ControlPath="/Users/dudlick/.ansible/cp/a0996a5096"' 192.168.51.139 '/bin/sh -c '"'"'echo ~danik && sleep 0'"'"''
+2023-08-12 20:27:28,246 p=31924 u=dudlick n=ansible | <192.168.51.128> (0, b'/home/dudlick\n', b'')
+2023-08-12 20:27:28,246 p=31924 u=dudlick n=ansible | <192.168.51.128> ESTABLISH SSH CONNECTION FOR USER: dudlick
+2023-08-12 20:27:28,247 p=31924 u=dudlick n=ansible | <192.168.51.128> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="dudlick"' -o ConnectTimeout=10 -o 'ControlPath="/Users/dudlick/.ansible/cp/4f72abf461"' 192.168.51.128 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/dudlick/.ansible/tmp `"&& mkdir "` echo /home/dudlick/.ansible/tmp/ansible-tmp-1691861248.246319-31927-83892861615197 `" && echo ansible-tmp-1691861248.246319-31927-83892861615197="` echo /home/dudlick/.ansible/tmp/ansible-tmp-1691861248.246319-31927-83892861615197 `" ) && sleep 0'"'"''
+2023-08-12 20:27:28,258 p=31924 u=dudlick n=ansible | <192.168.51.128> (0, b'ansible-tmp-1691861248.246319-31927-83892861615197=/home/dudlick/.ansible/tmp/ansible-tmp-1691861248.246319-31927-83892861615197\n', b'')
+2023-08-12 20:27:28,273 p=31924 u=dudlick n=ansible | <192.168.51.139> (0, b'/home/danik\n', b'')
+2023-08-12 20:27:28,273 p=31924 u=dudlick n=ansible | <192.168.51.139> ESTABLISH SSH CONNECTION FOR USER: danik
+2023-08-12 20:27:28,273 p=31924 u=dudlick n=ansible | <192.168.51.139> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="danik"' -o ConnectTimeout=10 -o 'ControlPath="/Users/dudlick/.ansible/cp/a0996a5096"' 192.168.51.139 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/danik/.ansible/tmp `"&& mkdir "` echo /home/danik/.ansible/tmp/ansible-tmp-1691861248.272646-31928-119771915792367 `" && echo ansible-tmp-1691861248.272646-31928-119771915792367="` echo /home/danik/.ansible/tmp/ansible-tmp-1691861248.272646-31928-119771915792367 `" ) && sleep 0'"'"''
+2023-08-12 20:27:28,286 p=31924 u=dudlick n=ansible | <192.168.51.139> (0, b'ansible-tmp-1691861248.272646-31928-119771915792367=/home/danik/.ansible/tmp/ansible-tmp-1691861248.272646-31928-119771915792367\n', b'')
+2023-08-12 20:27:28,321 p=31924 u=dudlick n=ansible | Using module file /opt/homebrew/lib/python3.11/site-packages/ansible/modules/ping.py
+2023-08-12 20:27:28,321 p=31924 u=dudlick n=ansible | <192.168.51.128> PUT /Users/dudlick/.ansible/tmp/ansible-local-31924hk6sp9vk/tmpy222vxx4 TO /home/dudlick/.ansible/tmp/ansible-tmp-1691861248.246319-31927-83892861615197/AnsiballZ_ping.py
+2023-08-12 20:27:28,321 p=31924 u=dudlick n=ansible | Using module file /opt/homebrew/lib/python3.11/site-packages/ansible/modules/ping.py
+2023-08-12 20:27:28,321 p=31924 u=dudlick n=ansible | <192.168.51.139> PUT /Users/dudlick/.ansible/tmp/ansible-local-31924hk6sp9vk/tmpwt5v3h8e TO /home/danik/.ansible/tmp/ansible-tmp-1691861248.272646-31928-119771915792367/AnsiballZ_ping.py
+2023-08-12 20:27:28,321 p=31924 u=dudlick n=ansible | <192.168.51.128> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="dudlick"' -o ConnectTimeout=10 -o 'ControlPath="/Users/dudlick/.ansible/cp/4f72abf461"' '[192.168.51.128]'
+2023-08-12 20:27:28,321 p=31924 u=dudlick n=ansible | <192.168.51.139> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="danik"' -o ConnectTimeout=10 -o 'ControlPath="/Users/dudlick/.ansible/cp/a0996a5096"' '[192.168.51.139]'
+2023-08-12 20:27:28,342 p=31924 u=dudlick n=ansible | <192.168.51.128> (0, b'sftp> put /Users/dudlick/.ansible/tmp/ansible-local-31924hk6sp9vk/tmpy222vxx4 /home/dudlick/.ansible/tmp/ansible-tmp-1691861248.246319-31927-83892861615197/AnsiballZ_ping.py\n', b'')
+2023-08-12 20:27:28,342 p=31924 u=dudlick n=ansible | <192.168.51.139> (0, b'sftp> put /Users/dudlick/.ansible/tmp/ansible-local-31924hk6sp9vk/tmpwt5v3h8e /home/danik/.ansible/tmp/ansible-tmp-1691861248.272646-31928-119771915792367/AnsiballZ_ping.py\n', b'')
+2023-08-12 20:27:28,342 p=31924 u=dudlick n=ansible | <192.168.51.128> ESTABLISH SSH CONNECTION FOR USER: dudlick
+2023-08-12 20:27:28,342 p=31924 u=dudlick n=ansible | <192.168.51.139> ESTABLISH SSH CONNECTION FOR USER: danik
+2023-08-12 20:27:28,342 p=31924 u=dudlick n=ansible | <192.168.51.128> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="dudlick"' -o ConnectTimeout=10 -o 'ControlPath="/Users/dudlick/.ansible/cp/4f72abf461"' 192.168.51.128 '/bin/sh -c '"'"'chmod u+x /home/dudlick/.ansible/tmp/ansible-tmp-1691861248.246319-31927-83892861615197/ /home/dudlick/.ansible/tmp/ansible-tmp-1691861248.246319-31927-83892861615197/AnsiballZ_ping.py && sleep 0'"'"''
+2023-08-12 20:27:28,344 p=31924 u=dudlick n=ansible | <192.168.51.139> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="danik"' -o ConnectTimeout=10 -o 'ControlPath="/Users/dudlick/.ansible/cp/a0996a5096"' 192.168.51.139 '/bin/sh -c '"'"'chmod u+x /home/danik/.ansible/tmp/ansible-tmp-1691861248.272646-31928-119771915792367/ /home/danik/.ansible/tmp/ansible-tmp-1691861248.272646-31928-119771915792367/AnsiballZ_ping.py && sleep 0'"'"''
+2023-08-12 20:27:28,353 p=31924 u=dudlick n=ansible | <192.168.51.128> (0, b'', b'')
+2023-08-12 20:27:28,353 p=31924 u=dudlick n=ansible | <192.168.51.128> ESTABLISH SSH CONNECTION FOR USER: dudlick
+2023-08-12 20:27:28,353 p=31924 u=dudlick n=ansible | <192.168.51.139> (0, b'', b'')
+2023-08-12 20:27:28,353 p=31924 u=dudlick n=ansible | <192.168.51.139> ESTABLISH SSH CONNECTION FOR USER: danik
+2023-08-12 20:27:28,354 p=31924 u=dudlick n=ansible | <192.168.51.128> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="dudlick"' -o ConnectTimeout=10 -o 'ControlPath="/Users/dudlick/.ansible/cp/4f72abf461"' -tt 192.168.51.128 '/bin/sh -c '"'"'sudo -H -S -p "[sudo via ansible, key=waybkmfpbbmewlwgwojyedeyvwcxqjwq] password:" -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-waybkmfpbbmewlwgwojyedeyvwcxqjwq ; /usr/bin/python3 /home/dudlick/.ansible/tmp/ansible-tmp-1691861248.246319-31927-83892861615197/AnsiballZ_ping.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2023-08-12 20:27:28,354 p=31924 u=dudlick n=ansible | <192.168.51.139> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="danik"' -o ConnectTimeout=10 -o 'ControlPath="/Users/dudlick/.ansible/cp/a0996a5096"' -tt 192.168.51.139 '/bin/sh -c '"'"'sudo -H -S -p "[sudo via ansible, key=zoeppetuuryzqavjzbpgjxucbikcxybu] password:" -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-zoeppetuuryzqavjzbpgjxucbikcxybu ; /usr/bin/python3 /home/danik/.ansible/tmp/ansible-tmp-1691861248.272646-31928-119771915792367/AnsiballZ_ping.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2023-08-12 20:27:28,372 p=31924 u=dudlick n=ansible | Escalation succeeded
+2023-08-12 20:27:28,454 p=31924 u=dudlick n=ansible | <192.168.51.128> (0, b'\r\n\r\n{"ping": "pong", "invocation": {"module_args": {"data": "pong"}}}\r\n', b'Shared connection to 192.168.51.128 closed.\r\n')
+2023-08-12 20:27:28,454 p=31924 u=dudlick n=ansible | <192.168.51.128> ESTABLISH SSH CONNECTION FOR USER: dudlick
+2023-08-12 20:27:28,454 p=31924 u=dudlick n=ansible | <192.168.51.128> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="dudlick"' -o ConnectTimeout=10 -o 'ControlPath="/Users/dudlick/.ansible/cp/4f72abf461"' 192.168.51.128 '/bin/sh -c '"'"'rm -f -r /home/dudlick/.ansible/tmp/ansible-tmp-1691861248.246319-31927-83892861615197/ > /dev/null 2>&1 && sleep 0'"'"''
+2023-08-12 20:27:28,457 p=31924 u=dudlick n=ansible | <192.168.51.128> (0, b'', b'')
+2023-08-12 20:27:28,457 p=31924 u=dudlick n=ansible | prod1 | SUCCESS => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "data": "pong"
+        }
+    },
+    "ping": "pong"
+}
+2023-08-12 20:27:40,364 p=31924 u=dudlick n=ansible | <192.168.51.139> ESTABLISH SSH CONNECTION FOR USER: danik
+2023-08-12 20:27:40,364 p=31924 u=dudlick n=ansible | <192.168.51.139> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="danik"' -o ConnectTimeout=10 -o 'ControlPath="/Users/dudlick/.ansible/cp/a0996a5096"' 192.168.51.139 '/bin/sh -c '"'"'rm -f -r /home/danik/.ansible/tmp/ansible-tmp-1691861248.272646-31928-119771915792367/ > /dev/null 2>&1 && sleep 0'"'"''
+2023-08-12 20:27:40,394 p=31924 u=dudlick n=ansible | <192.168.51.139> (0, b'', b'')
+2023-08-12 20:27:40,399 p=31924 u=dudlick n=ansible | monitoring1 | FAILED! => {
+    "msg": "Timeout (12s) waiting for privilege escalation prompt: "
+}
+2023-08-12 20:28:45,334 p=31973 u=dudlick n=ansible | prod1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 20:28:57,292 p=31973 u=dudlick n=ansible | monitoring1 | FAILED! => {
+    "msg": "Timeout (12s) waiting for privilege escalation prompt: "
+}
