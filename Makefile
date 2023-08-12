@@ -4,8 +4,8 @@ test-ansible:
 	ansible all -m ping
 	ansible --version	
 	python3 --version
-	ansible-playbook --check server-playbook.yaml
-	ansible-playbook --check nginx-playbook.yaml
+	ansible-playbook --check playbook-java.yaml
+	ansible-playbook --check playbook-monitoring.yaml
 
 java:
 	ansible-playbook playbook-java.yaml

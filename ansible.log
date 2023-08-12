@@ -600,3 +600,182 @@ The offending line appears to be:
     "changed": false,
     "ping": "pong"
 }
+2023-08-12 17:06:03,126 p=29642 u=dudlick n=ansible | prod1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:06:03,137 p=29642 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:06:03,461 p=29663 u=dudlick n=ansible | ERROR! the playbook: server-playbook.yaml could not be found
+2023-08-12 17:06:13,986 p=29670 u=dudlick n=ansible | ERROR! the playbook: server-playbook.yaml could not be found
+2023-08-12 17:06:41,658 p=29689 u=dudlick n=ansible | prod1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:06:41,660 p=29689 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:06:42,090 p=29710 u=dudlick n=ansible | PLAY [java role] **************************************************************************************************************************************************************************
+2023-08-12 17:06:42,097 p=29710 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 17:06:42,791 p=29710 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:06:42,792 p=29710 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 17:06:43,557 p=29710 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:06:43,560 p=29710 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 17:06:43,890 p=29710 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:06:43,892 p=29710 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 17:06:44,433 p=29710 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:06:44,437 p=29710 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 17:06:45,926 p=29710 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:06:45,929 p=29710 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 17:06:46,249 p=29710 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:06:46,253 p=29710 u=dudlick n=ansible | TASK [java-role : Start nginx Docker Compose] *********************************************************************************************************************************************
+2023-08-12 17:06:46,480 p=29710 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"changed": false, "cmd": ["docker-compose", "up", "-d"], "delta": null, "end": null, "msg": "Unable to change directory before execution: [Errno 2] No such file or directory: b'/opt/docker-compose.yml'", "rc": null, "start": null, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2023-08-12 17:06:46,481 p=29710 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 17:06:46,481 p=29710 u=dudlick n=ansible | monitoring1                : ok=6    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 17:09:42,355 p=29788 u=dudlick n=ansible | prod1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:09:42,369 p=29788 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:09:42,800 p=29815 u=dudlick n=ansible | PLAY [java role] **************************************************************************************************************************************************************************
+2023-08-12 17:09:42,806 p=29815 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 17:09:43,491 p=29815 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:09:43,493 p=29815 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 17:09:44,170 p=29815 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:09:44,174 p=29815 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 17:09:44,497 p=29815 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:09:44,499 p=29815 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 17:09:45,050 p=29815 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:09:45,052 p=29815 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 17:09:46,308 p=29815 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:09:46,312 p=29815 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 17:09:46,610 p=29815 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:09:46,613 p=29815 u=dudlick n=ansible | TASK [java-role : сreate app directory] ***************************************************************************************************************************************************
+2023-08-12 17:09:46,848 p=29815 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:09:46,851 p=29815 u=dudlick n=ansible | TASK [java-role : copy compose file] ******************************************************************************************************************************************************
+2023-08-12 17:09:46,894 p=29815 u=dudlick n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-08-12 17:09:46,894 p=29815 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"changed": false, "msg": "Could not find or access './files/*'\nSearched in:\n\t/Users/dudlick/my_dir/projects/monitoring/roles/java-role/files/./files/*\n\t/Users/dudlick/my_dir/projects/monitoring/roles/java-role/./files/*\n\t/Users/dudlick/my_dir/projects/monitoring/roles/java-role/tasks/files/./files/*\n\t/Users/dudlick/my_dir/projects/monitoring/roles/java-role/tasks/./files/*\n\t/Users/dudlick/my_dir/projects/monitoring/files/./files/*\n\t/Users/dudlick/my_dir/projects/monitoring/./files/* on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-08-12 17:09:46,895 p=29815 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 17:09:46,895 p=29815 u=dudlick n=ansible | monitoring1                : ok=7    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 17:10:19,474 p=29894 u=dudlick n=ansible | prod1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:10:19,475 p=29894 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:10:19,906 p=29915 u=dudlick n=ansible | PLAY [java role] **************************************************************************************************************************************************************************
+2023-08-12 17:10:19,912 p=29915 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 17:10:20,564 p=29915 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:10:20,565 p=29915 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 17:10:21,167 p=29915 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:10:21,169 p=29915 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 17:10:21,490 p=29915 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:10:21,492 p=29915 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 17:10:22,035 p=29915 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:10:22,039 p=29915 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 17:10:23,461 p=29915 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:10:23,463 p=29915 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 17:10:23,757 p=29915 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:10:23,760 p=29915 u=dudlick n=ansible | TASK [java-role : сreate app directory] ***************************************************************************************************************************************************
+2023-08-12 17:10:23,991 p=29915 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:10:23,994 p=29915 u=dudlick n=ansible | TASK [java-role : copy compose file] ******************************************************************************************************************************************************
+2023-08-12 17:10:24,217 p=29915 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:10:24,219 p=29915 u=dudlick n=ansible | TASK [java-role : Start nginx Docker Compose] *********************************************************************************************************************************************
+2023-08-12 17:10:24,439 p=29915 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"changed": false, "cmd": ["docker-compose", "up", "-d"], "delta": null, "end": null, "msg": "Unable to change directory before execution: [Errno 2] No such file or directory: b'/src/app/docker-compose.yml'", "rc": null, "start": null, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2023-08-12 17:10:24,440 p=29915 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 17:10:24,440 p=29915 u=dudlick n=ansible | monitoring1                : ok=8    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 17:10:44,947 p=30000 u=dudlick n=ansible | prod1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:10:44,955 p=30000 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:10:45,386 p=30021 u=dudlick n=ansible | PLAY [java role] **************************************************************************************************************************************************************************
+2023-08-12 17:10:45,391 p=30021 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 17:10:46,051 p=30021 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:10:46,052 p=30021 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 17:10:46,717 p=30021 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:10:46,719 p=30021 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 17:10:47,041 p=30021 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:10:47,044 p=30021 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 17:10:47,632 p=30021 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:10:47,635 p=30021 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 17:10:48,672 p=30021 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:10:48,677 p=30021 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 17:10:48,970 p=30021 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:10:48,973 p=30021 u=dudlick n=ansible | TASK [java-role : сreate app directory] ***************************************************************************************************************************************************
+2023-08-12 17:10:49,200 p=30021 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:10:49,203 p=30021 u=dudlick n=ansible | TASK [java-role : copy compose file] ******************************************************************************************************************************************************
+2023-08-12 17:10:49,426 p=30021 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:10:49,430 p=30021 u=dudlick n=ansible | TASK [java-role : Start nginx Docker Compose] *********************************************************************************************************************************************
+2023-08-12 17:10:49,643 p=30021 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"changed": false, "cmd": ["docker-compose", "up", "-d"], "delta": null, "end": null, "msg": "Unable to change directory before execution: [Errno 2] No such file or directory: b'/src/app/docker-compose.yaml'", "rc": null, "start": null, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2023-08-12 17:10:49,644 p=30021 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 17:10:49,644 p=30021 u=dudlick n=ansible | monitoring1                : ok=8    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 17:13:31,260 p=30132 u=dudlick n=ansible | prod1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:13:31,264 p=30132 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:13:31,693 p=30159 u=dudlick n=ansible | PLAY [java role] **************************************************************************************************************************************************************************
+2023-08-12 17:13:31,699 p=30159 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 17:13:32,408 p=30159 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:13:32,410 p=30159 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 17:13:33,056 p=30159 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:13:33,058 p=30159 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 17:13:33,387 p=30159 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:13:33,389 p=30159 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 17:13:33,943 p=30159 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:13:33,946 p=30159 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 17:13:34,985 p=30159 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:13:34,989 p=30159 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 17:13:35,295 p=30159 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:13:35,298 p=30159 u=dudlick n=ansible | TASK [java-role : сreate app directory] ***************************************************************************************************************************************************
+2023-08-12 17:13:35,531 p=30159 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:13:35,533 p=30159 u=dudlick n=ansible | TASK [java-role : copy compose file] ******************************************************************************************************************************************************
+2023-08-12 17:13:35,761 p=30159 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:13:35,763 p=30159 u=dudlick n=ansible | TASK [java-role : Start nginx Docker Compose] *********************************************************************************************************************************************
+2023-08-12 17:13:35,992 p=30159 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"changed": false, "cmd": ["docker-compose", "up", "-d"], "delta": null, "end": null, "msg": "Unable to change directory before execution: [Errno 2] No such file or directory: b'/var/app/docker-compose.yaml'", "rc": null, "start": null, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2023-08-12 17:13:35,993 p=30159 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 17:13:35,993 p=30159 u=dudlick n=ansible | monitoring1                : ok=8    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 17:15:17,944 p=30278 u=dudlick n=ansible | prod1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:15:17,950 p=30278 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:15:18,437 p=30305 u=dudlick n=ansible | PLAY [java role] **************************************************************************************************************************************************************************
+2023-08-12 17:15:18,443 p=30305 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 17:15:19,167 p=30305 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:15:19,171 p=30305 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 17:15:19,889 p=30305 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:15:19,891 p=30305 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 17:15:20,254 p=30305 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:15:20,256 p=30305 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 17:15:20,880 p=30305 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:15:20,887 p=30305 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 17:15:22,053 p=30305 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 17:15:22,055 p=30305 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 17:15:22,369 p=30305 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:15:22,372 p=30305 u=dudlick n=ansible | TASK [java-role : сreate app directory] ***************************************************************************************************************************************************
+2023-08-12 17:15:22,628 p=30305 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:15:22,631 p=30305 u=dudlick n=ansible | TASK [java-role : copy compose file] ******************************************************************************************************************************************************
+2023-08-12 17:15:22,853 p=30305 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 17:15:22,857 p=30305 u=dudlick n=ansible | TASK [java-role : Start nginx Docker Compose] *********************************************************************************************************************************************
+2023-08-12 17:15:23,106 p=30305 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"changed": false, "cmd": ["docker-compose", "up", "-d"], "delta": null, "end": null, "msg": "Unable to change directory before execution: [Errno 2] No such file or directory: b'/var/app/docker-compose.yaml'", "rc": null, "start": null, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2023-08-12 17:15:23,107 p=30305 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 17:15:23,107 p=30305 u=dudlick n=ansible | monitoring1                : ok=8    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
