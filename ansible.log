@@ -84,3 +84,519 @@
     "changed": false,
     "ping": "pong"
 }
+2023-08-12 15:31:28,045 p=27271 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 15:31:28,051 p=27271 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 15:31:28,209 p=27271 u=dudlick n=ansible | fatal: [monitoring1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: danik@192.168.51.139: Permission denied (publickey,password).", "unreachable": true}
+2023-08-12 15:31:28,209 p=27271 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 15:31:28,209 p=27271 u=dudlick n=ansible | monitoring1                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-12 15:31:34,992 p=27279 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host  port 22: Connection refused",
+    "unreachable": true
+}
+2023-08-12 15:31:35,133 p=27279 u=dudlick n=ansible | monitoring1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: danik@192.168.51.139: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2023-08-12 15:32:04,016 p=27307 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host  port 22: Connection refused",
+    "unreachable": true
+}
+2023-08-12 15:32:04,715 p=27307 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 15:32:06,246 p=27327 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 15:32:06,252 p=27327 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 15:32:12,030 p=27327 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 15:32:12,033 p=27327 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 15:32:12,732 p=27327 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:32:12,734 p=27327 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 15:32:13,057 p=27327 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:32:13,059 p=27327 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 15:32:14,356 p=27327 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:32:14,359 p=27327 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 15:32:15,850 p=27327 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:32:15,854 p=27327 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 15:32:17,179 p=27327 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:32:17,183 p=27327 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 15:32:17,191 p=27327 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"msg": "'dict object' has no attribute 'monitor'. 'dict object' has no attribute 'monitor'"}
+2023-08-12 15:32:17,191 p=27327 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 15:32:17,191 p=27327 u=dudlick n=ansible | monitoring1                : ok=6    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 15:33:01,703 p=27397 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 15:33:01,709 p=27397 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 15:33:03,109 p=27397 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:33:03,111 p=27397 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 15:33:03,756 p=27397 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:33:03,760 p=27397 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 15:33:04,081 p=27397 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:33:04,082 p=27397 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 15:33:05,459 p=27397 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:33:05,461 p=27397 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 15:33:06,617 p=27397 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:33:06,620 p=27397 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 15:33:07,554 p=27397 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:33:07,558 p=27397 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 15:33:07,570 p=27397 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1']) => {
+    "msg": "192.168.51.139 "
+}
+2023-08-12 15:33:07,578 p=27397 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 15:33:07,578 p=27397 u=dudlick n=ansible | monitoring1                : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-12 15:37:15,732 p=27483 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 15:37:15,739 p=27483 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 15:37:18,395 p=27483 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:37:18,397 p=27483 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 15:37:18,978 p=27483 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:37:18,980 p=27483 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 15:37:19,311 p=27483 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:37:19,313 p=27483 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 15:37:20,564 p=27483 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:37:20,565 p=27483 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 15:37:21,955 p=27483 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:37:21,959 p=27483 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 15:37:22,913 p=27483 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:37:22,916 p=27483 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:37:22,959 p=27483 u=dudlick n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-08-12 15:37:22,960 p=27483 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"changed": false, "msg": "Could not find or access './file/docker-compose.yaml'\nSearched in:\n\t/Users/dudlick/my_dir/projects/monitoring/roles/monitoring-role/files/./file/docker-compose.yaml\n\t/Users/dudlick/my_dir/projects/monitoring/roles/monitoring-role/./file/docker-compose.yaml\n\t/Users/dudlick/my_dir/projects/monitoring/roles/monitoring-role/tasks/files/./file/docker-compose.yaml\n\t/Users/dudlick/my_dir/projects/monitoring/roles/monitoring-role/tasks/./file/docker-compose.yaml\n\t/Users/dudlick/my_dir/projects/monitoring/files/./file/docker-compose.yaml\n\t/Users/dudlick/my_dir/projects/monitoring/./file/docker-compose.yaml on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-08-12 15:37:22,960 p=27483 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 15:37:22,961 p=27483 u=dudlick n=ansible | monitoring1                : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 15:37:50,008 p=27554 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 15:37:50,015 p=27554 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 15:37:51,458 p=27554 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:37:51,460 p=27554 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 15:37:52,017 p=27554 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:37:52,019 p=27554 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 15:37:52,338 p=27554 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:37:52,340 p=27554 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 15:37:53,610 p=27554 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:37:53,614 p=27554 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 15:37:54,782 p=27554 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:37:54,787 p=27554 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 15:37:55,658 p=27554 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:37:55,662 p=27554 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:37:56,099 p=27554 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"changed": false, "checksum": "ce88673bcd81650debdc19a84f48b75aedb1bb54", "msg": "Destination directory /var/www does not exist"}
+2023-08-12 15:37:56,100 p=27554 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 15:37:56,100 p=27554 u=dudlick n=ansible | monitoring1                : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 15:40:55,212 p=27647 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 15:40:55,219 p=27647 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 15:40:56,981 p=27647 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:40:56,983 p=27647 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 15:40:57,550 p=27647 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:40:57,552 p=27647 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 15:40:57,862 p=27647 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:40:57,864 p=27647 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 15:40:59,134 p=27647 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:40:59,136 p=27647 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 15:41:00,299 p=27647 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:41:00,302 p=27647 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 15:41:01,210 p=27647 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:41:01,214 p=27647 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 15:41:01,450 p=27647 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 15:41:01,454 p=27647 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:41:01,898 p=27647 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 15:41:01,901 p=27647 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 15:41:01,913 p=27647 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1']) => {
+    "msg": "192.168.51.139 "
+}
+2023-08-12 15:41:01,917 p=27647 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:41:02,237 p=27647 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 15:41:02,243 p=27647 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 15:41:02,243 p=27647 u=dudlick n=ansible | monitoring1                : ok=10   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-12 15:44:47,611 p=27879 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 15:44:47,619 p=27879 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 15:44:49,457 p=27879 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:44:49,460 p=27879 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 15:44:50,047 p=27879 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:44:50,049 p=27879 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 15:44:50,368 p=27879 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:44:50,370 p=27879 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 15:44:51,717 p=27879 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:44:51,719 p=27879 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 15:44:53,089 p=27879 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:44:53,093 p=27879 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 15:44:53,983 p=27879 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:44:53,989 p=27879 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 15:44:54,222 p=27879 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:44:54,225 p=27879 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:44:54,592 p=27879 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:44:54,595 p=27879 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 15:44:54,607 p=27879 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1']) => {
+    "msg": "192.168.51.139 "
+}
+2023-08-12 15:44:54,611 p=27879 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:44:54,994 p=27879 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 15:44:54,997 p=27879 u=dudlick n=ansible | TASK [monitoring-role : Replace Server with 192.168.51.139] *******************************************************************************************************************************
+2023-08-12 15:44:55,004 p=27879 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined. 'item' is undefined\n\nThe error appears to be in '/Users/dudlick/my_dir/projects/monitoring/roles/monitoring-role/tasks/main.yml': line 25, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Replace Server with {{ ansible_host }}\n  ^ here\nWe could be wrong, but this one looks like it might be an issue with\nmissing quotes. Always quote template expression brackets when they\nstart a value. For instance:\n\n    with_items:\n      - {{ foo }}\n\nShould be written as:\n\n    with_items:\n      - \"{{ foo }}\"\n"}
+2023-08-12 15:44:55,005 p=27879 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 15:44:55,005 p=27879 u=dudlick n=ansible | monitoring1                : ok=10   changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 15:46:09,026 p=27984 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 15:46:09,033 p=27984 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 15:46:10,911 p=27984 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:10,914 p=27984 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 15:46:11,611 p=27984 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:11,615 p=27984 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 15:46:11,962 p=27984 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:11,964 p=27984 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 15:46:13,273 p=27984 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:13,276 p=27984 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 15:46:14,462 p=27984 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:14,467 p=27984 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 15:46:15,357 p=27984 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:15,360 p=27984 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 15:46:15,586 p=27984 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:15,590 p=27984 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:46:15,938 p=27984 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:15,940 p=27984 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 15:46:15,952 p=27984 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1']) => {
+    "msg": "192.168.51.139 "
+}
+2023-08-12 15:46:15,955 p=27984 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:46:16,254 p=27984 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:16,257 p=27984 u=dudlick n=ansible | TASK [monitoring-role : Replace Server with 192.168.51.139] *******************************************************************************************************************************
+2023-08-12 15:46:16,264 p=27984 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined. 'item' is undefined\n\nThe error appears to be in '/Users/dudlick/my_dir/projects/monitoring/roles/monitoring-role/tasks/main.yml': line 25, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Replace Server with {{ ansible_host }}\n  ^ here\nWe could be wrong, but this one looks like it might be an issue with\nmissing quotes. Always quote template expression brackets when they\nstart a value. For instance:\n\n    with_items:\n      - {{ foo }}\n\nShould be written as:\n\n    with_items:\n      - \"{{ foo }}\"\n"}
+2023-08-12 15:46:16,265 p=27984 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 15:46:16,265 p=27984 u=dudlick n=ansible | monitoring1                : ok=10   changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 15:46:46,805 p=28089 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 15:46:46,812 p=28089 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 15:46:48,212 p=28089 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:48,214 p=28089 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 15:46:48,770 p=28089 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:48,772 p=28089 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 15:46:49,095 p=28089 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:49,097 p=28089 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 15:46:50,360 p=28089 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:50,363 p=28089 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 15:46:51,514 p=28089 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:51,517 p=28089 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 15:46:52,389 p=28089 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:52,392 p=28089 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 15:46:52,621 p=28089 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:52,625 p=28089 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:46:52,987 p=28089 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:52,989 p=28089 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 15:46:53,000 p=28089 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1']) => {
+    "msg": "192.168.51.139 "
+}
+2023-08-12 15:46:53,002 p=28089 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:46:53,301 p=28089 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:46:53,304 p=28089 u=dudlick n=ansible | TASK [monitoring-role : Replace Server with 192.168.51.139] *******************************************************************************************************************************
+2023-08-12 15:46:53,525 p=28089 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1'])
+2023-08-12 15:46:53,532 p=28089 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 15:46:53,532 p=28089 u=dudlick n=ansible | monitoring1                : ok=11   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-12 15:48:40,486 p=28207 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 15:48:40,493 p=28207 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 15:48:42,255 p=28207 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:48:42,257 p=28207 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 15:48:42,862 p=28207 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:48:42,864 p=28207 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 15:48:43,183 p=28207 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:48:43,185 p=28207 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 15:48:44,460 p=28207 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:48:44,464 p=28207 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 15:48:45,866 p=28207 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:48:45,870 p=28207 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 15:48:46,806 p=28207 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:48:46,809 p=28207 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 15:48:47,043 p=28207 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:48:47,046 p=28207 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:48:47,425 p=28207 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:48:47,428 p=28207 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 15:48:47,440 p=28207 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1']) => {
+    "msg": "192.168.51.139 "
+}
+2023-08-12 15:48:47,444 p=28207 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:48:47,748 p=28207 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:48:47,751 p=28207 u=dudlick n=ansible | TASK [monitoring-role : Replace Server with 192.168.51.139] *******************************************************************************************************************************
+2023-08-12 15:48:47,975 p=28207 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1'])
+2023-08-12 15:48:47,982 p=28207 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 15:48:47,982 p=28207 u=dudlick n=ansible | monitoring1                : ok=11   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-12 15:50:52,902 p=28319 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 15:50:52,909 p=28319 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 15:50:54,647 p=28319 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:50:54,650 p=28319 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 15:50:55,194 p=28319 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:50:55,196 p=28319 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 15:50:55,516 p=28319 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:50:55,518 p=28319 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 15:50:56,814 p=28319 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:50:56,816 p=28319 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 15:50:57,951 p=28319 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:50:57,956 p=28319 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 15:50:58,849 p=28319 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:50:58,852 p=28319 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 15:50:59,085 p=28319 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:50:59,088 p=28319 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:50:59,446 p=28319 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:50:59,450 p=28319 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 15:50:59,462 p=28319 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1']) => {
+    "msg": "192.168.51.139 "
+}
+2023-08-12 15:50:59,465 p=28319 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:50:59,849 p=28319 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 15:50:59,853 p=28319 u=dudlick n=ansible | TASK [monitoring-role : Replace Server with 192.168.51.139] *******************************************************************************************************************************
+2023-08-12 15:51:00,077 p=28319 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1'])
+2023-08-12 15:51:00,082 p=28319 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 15:51:00,082 p=28319 u=dudlick n=ansible | monitoring1                : ok=11   changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-12 15:51:52,141 p=28432 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 15:51:52,148 p=28432 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 15:51:53,600 p=28432 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:51:53,603 p=28432 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 15:51:54,165 p=28432 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:51:54,167 p=28432 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 15:51:54,488 p=28432 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:51:54,489 p=28432 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 15:51:55,785 p=28432 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:51:55,788 p=28432 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 15:51:56,959 p=28432 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:51:56,963 p=28432 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 15:51:57,913 p=28432 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:51:57,916 p=28432 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 15:51:58,151 p=28432 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:51:58,155 p=28432 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:51:58,518 p=28432 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:51:58,521 p=28432 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 15:51:58,532 p=28432 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1']) => {
+    "msg": "192.168.51.139 "
+}
+2023-08-12 15:51:58,535 p=28432 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:51:58,835 p=28432 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:51:58,837 p=28432 u=dudlick n=ansible | TASK [monitoring-role : Replace Server with 192.168.51.139] *******************************************************************************************************************************
+2023-08-12 15:51:59,091 p=28432 u=dudlick n=ansible | failed: [monitoring1] (item=[0, 'monitoring1']) => {"ansible_loop_var": "item", "changed": false, "item": [0, "monitoring1"], "module_stderr": "Shared connection to 192.168.51.139 closed.\r\n", "module_stdout": "\r\nTraceback (most recent call last):\r\n  File \"/home/danik/.ansible/tmp/ansible-tmp-1691844718.856948-28516-95518696987674/AnsiballZ_replace.py\", line 107, in <module>\r\n    _ansiballz_main()\r\n  File \"/home/danik/.ansible/tmp/ansible-tmp-1691844718.856948-28516-95518696987674/AnsiballZ_replace.py\", line 99, in _ansiballz_main\r\n    invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)\r\n  File \"/home/danik/.ansible/tmp/ansible-tmp-1691844718.856948-28516-95518696987674/AnsiballZ_replace.py\", line 47, in invoke_module\r\n    runpy.run_module(mod_name='ansible.modules.replace', init_globals=dict(_module_fqn='ansible.modules.replace', _modlib_path=modlib_path),\r\n  File \"/usr/lib/python3.10/runpy.py\", line 224, in run_module\r\n    return _run_module_code(code, init_globals, run_name, mod_spec)\r\n  File \"/usr/lib/python3.10/runpy.py\", line 96, in _run_module_code\r\n    _run_code(code, mod_globals, init_globals,\r\n  File \"/usr/lib/python3.10/runpy.py\", line 86, in _run_code\r\n    exec(code, run_globals)\r\n  File \"/tmp/ansible_replace_payload_kh66crdw/ansible_replace_payload.zip/ansible/modules/replace.py\", line 317, in <module>\r\n  File \"/tmp/ansible_replace_payload_kh66crdw/ansible_replace_payload.zip/ansible/modules/replace.py\", line 286, in main\r\n  File \"/usr/lib/python3.10/re.py\", line 251, in compile\r\n    return _compile(pattern, flags)\r\n  File \"/usr/lib/python3.10/re.py\", line 303, in _compile\r\n    p = sre_compile.compile(pattern, flags)\r\n  File \"/usr/lib/python3.10/sre_compile.py\", line 788, in compile\r\n    p = sre_parse.parse(p, flags)\r\n  File \"/usr/lib/python3.10/sre_parse.py\", line 955, in parse\r\n    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)\r\n  File \"/usr/lib/python3.10/sre_parse.py\", line 444, in _parse_sub\r\n    itemsappend(_parse(source, state, verbose, nested + 1,\r\n  File \"/usr/lib/python3.10/sre_parse.py\", line 669, in _parse\r\n    raise source.error(\"nothing to repeat\",\r\nre.error: nothing to repeat at position 0\r\n", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2023-08-12 15:51:59,093 p=28432 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 15:51:59,093 p=28432 u=dudlick n=ansible | monitoring1                : ok=10   changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 15:52:35,993 p=28537 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 15:52:36,000 p=28537 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 15:52:37,422 p=28537 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:52:37,426 p=28537 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 15:52:37,988 p=28537 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:52:37,990 p=28537 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 15:52:38,317 p=28537 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:52:38,319 p=28537 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 15:52:39,589 p=28537 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:52:39,593 p=28537 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 15:52:41,053 p=28537 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:52:41,058 p=28537 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 15:52:41,976 p=28537 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:52:41,979 p=28537 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 15:52:42,210 p=28537 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:52:42,213 p=28537 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:52:42,561 p=28537 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:52:42,564 p=28537 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 15:52:42,577 p=28537 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1']) => {
+    "msg": "192.168.51.139 "
+}
+2023-08-12 15:52:42,580 p=28537 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 15:52:42,878 p=28537 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 15:52:42,881 p=28537 u=dudlick n=ansible | TASK [monitoring-role : Replace Server with 192.168.51.139] *******************************************************************************************************************************
+2023-08-12 15:52:43,108 p=28537 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1'])
+2023-08-12 15:52:43,115 p=28537 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 15:52:43,115 p=28537 u=dudlick n=ansible | monitoring1                : ok=11   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-12 16:18:00,261 p=28702 u=dudlick n=ansible | ERROR! couldn't resolve module/action 'set_facts'. This often indicates a misspelling, missing collection, or incorrect module path.
+
+The error appears to be in '/Users/dudlick/my_dir/projects/monitoring/roles/monitoring-role/tasks/main.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: add ip in facts
+  ^ here
+
+2023-08-12 16:18:16,041 p=28716 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 16:18:16,048 p=28716 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 16:18:20,179 p=28716 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:18:20,182 p=28716 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 16:18:20,819 p=28716 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:18:20,821 p=28716 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 16:18:21,143 p=28716 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:18:21,145 p=28716 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 16:18:22,518 p=28716 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:18:22,520 p=28716 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 16:18:24,273 p=28716 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:18:24,277 p=28716 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 16:18:25,298 p=28716 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:18:25,302 p=28716 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 16:18:25,538 p=28716 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:18:25,541 p=28716 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 16:18:25,898 p=28716 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:18:25,901 p=28716 u=dudlick n=ansible | TASK [monitoring-role : add ip in facts] **************************************************************************************************************************************************
+2023-08-12 16:18:25,908 p=28716 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: \"hostvars['monitoring']\" is undefined. \"hostvars['monitoring']\" is undefined\n\nThe error appears to be in '/Users/dudlick/my_dir/projects/monitoring/roles/monitoring-role/tasks/main.yml': line 14, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: add ip in facts\n  ^ here\n"}
+2023-08-12 16:18:25,908 p=28716 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 16:18:25,909 p=28716 u=dudlick n=ansible | monitoring1                : ok=8    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 16:19:12,342 p=28808 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 16:19:12,349 p=28808 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 16:19:13,863 p=28808 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:19:13,865 p=28808 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 16:19:14,639 p=28808 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:19:14,640 p=28808 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 16:19:14,967 p=28808 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:19:14,968 p=28808 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 16:19:16,221 p=28808 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:19:16,225 p=28808 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 16:19:17,213 p=28808 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:19:17,216 p=28808 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 16:19:18,126 p=28808 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:19:18,129 p=28808 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 16:19:18,360 p=28808 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:19:18,363 p=28808 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 16:19:18,715 p=28808 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:19:18,717 p=28808 u=dudlick n=ansible | TASK [monitoring-role : add ip in facts] **************************************************************************************************************************************************
+2023-08-12 16:19:18,726 p=28808 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: \"hostvars['item.1']\" is undefined. \"hostvars['item.1']\" is undefined\n\nThe error appears to be in '/Users/dudlick/my_dir/projects/monitoring/roles/monitoring-role/tasks/main.yml': line 14, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: add ip in facts\n  ^ here\n"}
+2023-08-12 16:19:18,727 p=28808 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 16:19:18,727 p=28808 u=dudlick n=ansible | monitoring1                : ok=8    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 16:19:55,248 p=28892 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 16:19:55,254 p=28892 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 16:19:56,709 p=28892 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:19:56,711 p=28892 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 16:19:57,364 p=28892 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:19:57,366 p=28892 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 16:19:57,688 p=28892 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:19:57,690 p=28892 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 16:19:58,983 p=28892 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:19:58,985 p=28892 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 16:19:59,965 p=28892 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:19:59,969 p=28892 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 16:20:00,879 p=28892 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:20:00,884 p=28892 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 16:20:01,117 p=28892 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:20:01,120 p=28892 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 16:20:01,469 p=28892 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:20:01,473 p=28892 u=dudlick n=ansible | TASK [monitoring-role : add ip in facts] **************************************************************************************************************************************************
+2023-08-12 16:20:01,482 p=28892 u=dudlick n=ansible | fatal: [monitoring1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: \"hostvars['item.1']\" is undefined. \"hostvars['item.1']\" is undefined\n\nThe error appears to be in '/Users/dudlick/my_dir/projects/monitoring/roles/monitoring-role/tasks/main.yml': line 14, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: add ip in facts\n  ^ here\n"}
+2023-08-12 16:20:01,482 p=28892 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 16:20:01,482 p=28892 u=dudlick n=ansible | monitoring1                : ok=8    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-12 16:22:18,784 p=28989 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 16:22:18,791 p=28989 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 16:22:20,714 p=28989 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:20,717 p=28989 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 16:22:21,323 p=28989 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:21,325 p=28989 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 16:22:21,650 p=28989 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:21,652 p=28989 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 16:22:22,907 p=28989 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:22,909 p=28989 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 16:22:24,129 p=28989 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:24,134 p=28989 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 16:22:25,055 p=28989 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:25,061 p=28989 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 16:22:25,298 p=28989 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:25,301 p=28989 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 16:22:25,653 p=28989 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:25,656 p=28989 u=dudlick n=ansible | TASK [monitoring-role : ip facts] *********************************************************************************************************************************************************
+2023-08-12 16:22:25,667 p=28989 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:25,669 p=28989 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 16:22:25,678 p=28989 u=dudlick n=ansible | ok: [monitoring1] => {
+    "msg": "192.168.51.139"
+}
+2023-08-12 16:22:25,680 p=28989 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 16:22:25,979 p=28989 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:25,982 p=28989 u=dudlick n=ansible | TASK [monitoring-role : Replace Server with 192.168.51.139] *******************************************************************************************************************************
+2023-08-12 16:22:26,213 p=28989 u=dudlick n=ansible | ok: [monitoring1] => (item=[0, 'monitoring1'])
+2023-08-12 16:22:26,219 p=28989 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 16:22:26,219 p=28989 u=dudlick n=ansible | monitoring1                : ok=12   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-12 16:22:46,168 p=29097 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 16:22:46,174 p=29097 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 16:22:47,675 p=29097 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:47,677 p=29097 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 16:22:48,438 p=29097 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:48,443 p=29097 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 16:22:48,765 p=29097 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:48,767 p=29097 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 16:22:50,049 p=29097 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:50,054 p=29097 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 16:22:51,138 p=29097 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:51,146 p=29097 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 16:22:52,075 p=29097 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:52,082 p=29097 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 16:22:52,322 p=29097 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:52,325 p=29097 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 16:22:52,725 p=29097 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:52,728 p=29097 u=dudlick n=ansible | TASK [monitoring-role : ip facts] *********************************************************************************************************************************************************
+2023-08-12 16:22:52,740 p=29097 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:52,743 p=29097 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 16:22:52,755 p=29097 u=dudlick n=ansible | ok: [monitoring1] => {
+    "msg": "192.168.51.139"
+}
+2023-08-12 16:22:52,757 p=29097 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 16:22:53,123 p=29097 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:53,127 p=29097 u=dudlick n=ansible | TASK [monitoring-role : Replace Server with 192.168.51.139] *******************************************************************************************************************************
+2023-08-12 16:22:53,387 p=29097 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:22:53,393 p=29097 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 16:22:53,394 p=29097 u=dudlick n=ansible | monitoring1                : ok=12   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-12 16:23:38,058 p=29205 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 16:23:38,065 p=29205 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 16:23:39,449 p=29205 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:23:39,451 p=29205 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 16:23:40,054 p=29205 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:23:40,055 p=29205 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 16:23:40,375 p=29205 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:23:40,377 p=29205 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 16:23:41,652 p=29205 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:23:41,654 p=29205 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 16:23:42,869 p=29205 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:23:42,873 p=29205 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 16:23:43,796 p=29205 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:23:43,799 p=29205 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 16:23:44,037 p=29205 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:23:44,039 p=29205 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 16:23:44,407 p=29205 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:23:44,410 p=29205 u=dudlick n=ansible | TASK [monitoring-role : ip facts] *********************************************************************************************************************************************************
+2023-08-12 16:23:44,420 p=29205 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:23:44,422 p=29205 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 16:23:44,431 p=29205 u=dudlick n=ansible | ok: [monitoring1] => {
+    "msg": "192.168.51.139"
+}
+2023-08-12 16:23:44,433 p=29205 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 16:23:44,726 p=29205 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:23:44,732 p=29205 u=dudlick n=ansible | TASK [monitoring-role : Replace Server with 192.168.51.139] *******************************************************************************************************************************
+2023-08-12 16:23:44,961 p=29205 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 16:23:44,968 p=29205 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 16:23:44,968 p=29205 u=dudlick n=ansible | monitoring1                : ok=12   changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-12 16:24:08,019 p=29311 u=dudlick n=ansible | PLAY [montoring roles] ********************************************************************************************************************************************************************
+2023-08-12 16:24:08,027 p=29311 u=dudlick n=ansible | TASK [install-docker-role : Install software] *********************************************************************************************************************************************
+2023-08-12 16:24:09,549 p=29311 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:24:09,551 p=29311 u=dudlick n=ansible | TASK [install-docker-role : Add Docker GPG apt Key] ***************************************************************************************************************************************
+2023-08-12 16:24:10,169 p=29311 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:24:10,173 p=29311 u=dudlick n=ansible | TASK [install-docker-role : Add Docker Repository] ****************************************************************************************************************************************
+2023-08-12 16:24:10,503 p=29311 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:24:10,505 p=29311 u=dudlick n=ansible | TASK [install-docker-role : apt update and install docker] ********************************************************************************************************************************
+2023-08-12 16:24:11,792 p=29311 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:24:11,798 p=29311 u=dudlick n=ansible | TASK [install-docker-role : Install docker-compose] ***************************************************************************************************************************************
+2023-08-12 16:24:12,976 p=29311 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:24:12,982 p=29311 u=dudlick n=ansible | TASK [install-docker-role : install docker module] ****************************************************************************************************************************************
+2023-08-12 16:24:13,934 p=29311 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:24:13,941 p=29311 u=dudlick n=ansible | TASK [monitoring-role : сreate monitoring directory] **************************************************************************************************************************************
+2023-08-12 16:24:14,212 p=29311 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:24:14,216 p=29311 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 16:24:14,568 p=29311 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:24:14,571 p=29311 u=dudlick n=ansible | TASK [monitoring-role : ip facts] *********************************************************************************************************************************************************
+2023-08-12 16:24:14,581 p=29311 u=dudlick n=ansible | ok: [monitoring1]
+2023-08-12 16:24:14,583 p=29311 u=dudlick n=ansible | TASK [monitoring-role : monitor] **********************************************************************************************************************************************************
+2023-08-12 16:24:14,592 p=29311 u=dudlick n=ansible | ok: [monitoring1] => {
+    "msg": "192.168.51.139"
+}
+2023-08-12 16:24:14,594 p=29311 u=dudlick n=ansible | TASK [monitoring-role : copy docker-compose file] *****************************************************************************************************************************************
+2023-08-12 16:24:14,995 p=29311 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 16:24:14,998 p=29311 u=dudlick n=ansible | TASK [monitoring-role : Replace Server with 192.168.51.139] *******************************************************************************************************************************
+2023-08-12 16:24:15,214 p=29311 u=dudlick n=ansible | changed: [monitoring1]
+2023-08-12 16:24:15,219 p=29311 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2023-08-12 16:24:15,219 p=29311 u=dudlick n=ansible | monitoring1                : ok=12   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-12 17:04:44,773 p=29524 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host  port 22: Connection refused",
+    "unreachable": true
+}
+2023-08-12 17:04:45,533 p=29524 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:05:08,348 p=29553 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-12 17:05:08,639 p=29553 u=dudlick n=ansible | prod1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
