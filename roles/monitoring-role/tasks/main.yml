@@ -1,5 +1,6 @@
 ---
 # tasks file for monitoring-role
+
 - name: monitor
   debug:
     msg: "{{ hostvars[ item.1 ].ansible_host }} "

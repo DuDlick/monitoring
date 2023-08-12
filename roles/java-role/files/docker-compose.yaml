@@ -25,6 +25,7 @@ services:
       depends_on: 
         - node_exporter
       restart: unless-stopped
+      
 
 networks:
   exporter:

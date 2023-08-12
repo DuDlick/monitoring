@@ -8,7 +8,7 @@
 
 - name: Add Docker GPG apt Key
   apt_key:
-    url: 'https://download.docker.com/linux/ubuntu/gpg'
+    url: '{{ gpg_docker_url }}'
     state: present
 
 - name: Add Docker Repository
@@ -24,7 +24,7 @@
 
 - name: Install docker-compose
   get_url:
-    url: 'https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-linux-aarch64'
+    url: '{{ docker_url }}'
     dest: /usr/local/bin/docker-compose
     mode: '0777'
 

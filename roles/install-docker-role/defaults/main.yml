@@ -14,3 +14,7 @@ all_packages:
   - software-properties-common
   - virtualenv
   - expect
+
+docker_url: https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-linux-aarch64
+
+gpg_docker_url: https://download.docker.com/linux/ubuntu/gpg
