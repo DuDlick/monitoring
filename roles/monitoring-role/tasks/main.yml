@@ -16,6 +16,12 @@
   args:
     chdir: /var/monitoring/docker-compose.yaml
 
+- name: copy docker-compose file
+  template:
+    src: prometheus.yaml.j2 
+    dest: '/var/monitoring/prometheus/prometheus.yaml'
+    mode: '0744'
+
 - name: ip facts
   ansible.builtin.set_fact:
     target_ip: "{{ hostvars['prod1']['ansible_host'] }}"
@@ -23,12 +29,6 @@
 - name: monitor
   debug:
     msg: "{{ target_ip }}"
-
-- name: copy docker-compose file
-  template:
-    src: prometheus.yaml.j2 
-    dest: '/var/monitoring/prometheus/prometheus.yaml'
-    mode: '0744'
 
 - name: Replace Server with {{ ansible_host }}
   replace:
