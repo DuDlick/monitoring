@@ -11,10 +11,10 @@
     dest: '/var/monitoring/docker-compose.yaml'
     mode: '0744'
 
-- name: Start monitoring docker Compose
-  command: docker-compose up -d
-  args:
-    chdir: /var/monitoring/docker-compose.yaml
+- name: Start Docker Compose
+  docker_compose:
+    project_src: /var/monitoring/docker-compose.yaml
+    state: absentl
 
 - name: copy docker-compose file
   template:

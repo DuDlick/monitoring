@@ -4,7 +4,7 @@ prod1 ansible_host=192.168.51.128
 [prod:vars]
 ansible_port=22 
 ansible_connection=ssh 
-ansible_user=dudlick
+ansible_user=root
 ansible_sudo_pass='qwerty' 
 ansible_ssh_private_key_file=/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key
 
@@ -14,6 +14,6 @@ monitoring1 ansible_host=192.168.51.139
 [monitoring:vars]
 ansible_port=22 
 ansible_connection=ssh 
-ansible_user=danik 
+ansible_user=root
 ansible_sudo_pass='qwerty' 
 ansible_ssh_private_key_file=/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key

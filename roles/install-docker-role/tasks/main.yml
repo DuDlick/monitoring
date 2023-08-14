@@ -25,11 +25,10 @@
     - docker start
     - docker enable
 
-- name: Install docker-compose
-  get_url:
-    url: '{{ docker_url }}'
-    dest: /usr/local/bin/docker-compose
-    mode: '0777'
+- name: Установка Docker Compose
+  pip:
+    name: docker-compose
+    state: present
 
 - name: install docker module
   pip:

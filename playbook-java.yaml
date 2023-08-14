@@ -1,6 +1,6 @@
 ---
 - name: java role
-  hosts: monitoring
+  hosts: prod
   become: true
   gather_facts: false
   roles: 

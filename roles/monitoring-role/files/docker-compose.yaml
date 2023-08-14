@@ -18,7 +18,7 @@ services:
       TZ: "Europe/Moscow"
     networks:
       monitoring:
-        ipv4_address: 192.168.0.3
+        ipv4_address: 192.168.51.3
 
   prometheus:
     image: prom/prometheus:latest
@@ -36,12 +36,12 @@ services:
       TZ: "Europe/Moscow"
     networks:
       monitoring:
-        ipv4_address: 192.168.0.4
+        ipv4_address: 192.168.51.4
 
 networks:
   monitoring:
     driver: bridge
     ipam:
       config:
-        - subnet: 192.168.0.0/16
-          gateway: 192.168.0.1
+        - subnet: 192.168.51.0/16
+          gateway: 192.168.51.1
