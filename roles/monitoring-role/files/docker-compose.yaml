@@ -16,32 +16,22 @@ services:
     restart: unless-stopped
     environment:
       TZ: "Europe/Moscow"
-    networks:
-      monitoring:
-        ipv4_address: 192.168.51.3
 
   prometheus:
     image: prom/prometheus:latest
     volumes:
       - ./prometheus:/etc/prometheus/
-      - ./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yaml
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     container_name: prometheus
     hostname: prometheus
     command:
-      - --config.file=/etc/prometheus/prometheus.yml
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
     ports:
       - 9090:9090
     restart: unless-stopped
     environment:
       TZ: "Europe/Moscow"
-    networks:
-      monitoring:
-        ipv4_address: 192.168.51.4
-
-networks:
-  monitoring:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 192.168.51.0/16
-          gateway: 192.168.51.1

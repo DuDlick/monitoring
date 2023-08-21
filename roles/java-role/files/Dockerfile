@@ -1,11 +1,9 @@
-FROM ubuntu:latest
+FROM openjdk:11
 
-RUN apt update && apt intsall git \
-    && mkdir -p /usr/src/myapp \
-    && cd /usr/src/myapp \
-    && git clone https://github.com/tutorialworks/spring-boot-with-metrics.git
+WORKDIR /app
 
-WORKDIR /usr/src/myapp
+RUN git clone https://github.com/tutorialworks/spring-boot-with-metrics.git && ./mvnw package -DskipTests
 
 EXPOSE 8080
 
+CMD ["java", "-jar", "target/spring-boot-with-metrics.jar"]

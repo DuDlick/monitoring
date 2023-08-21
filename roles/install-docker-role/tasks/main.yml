@@ -25,7 +25,7 @@
     - docker start
     - docker enable
 
-- name: Установка Docker Compose
+- name: install Docker Compose
   pip:
     name: docker-compose
     state: present

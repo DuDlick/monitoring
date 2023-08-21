@@ -2,22 +2,23 @@
 # tasks file for java-role
 - name: сreate app directory
   file:
-    path: /var/app/
+    path: '/var/app/'
     state: directory
 
 - name: copy compose file
   copy:
     src: docker-compose.yaml
-    dest: /var/app
+    dest: '/var/app/'
     mode: '0777'
 
 - name: copy dockerfile
   copy:
     src: Dockerfile
-    dest: /var/app
+    dest: '/var/app/'
     mode: '0777'
 
 - name: Start Docker Compose
   docker_compose:
     project_src: '/var/app/'
+    state: present
   register: docker_compose_start
