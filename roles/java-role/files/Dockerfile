@@ -1,9 +1,11 @@
-FROM openjdk:11
+FROM ubuntu:latest
+
+RUN apt update && apt intsall git \
+    && mkdir -p /usr/src/myapp \
+    && cd /usr/src/myapp \
+    && git clone https://github.com/tutorialworks/spring-boot-with-metrics.git
 
 WORKDIR /usr/src/myapp
 
-RUN git clone https://github.com/tutorialworks/spring-boot-with-metrics.git
-
 EXPOSE 8080
 
-CMD ["java", "-jar", "app.jar"]
