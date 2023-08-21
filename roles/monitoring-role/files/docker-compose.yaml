@@ -1,28 +1,27 @@
-version: '3.9'
+version: '3'
 
 services:  
   grafana:
-    image: grafana/grafana
-    user: root
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: unless-stopped
     depends_on:
       - prometheus
     ports:
-      - 3000:3000
+      - '3000:3000'
     volumes:
-      - ./grafana:/var/lib/grafana
       - ./grafana/provisioning/:/etc/grafana/provisioning/
-    container_name: grafana
-    hostname: grafana
-    restart: unless-stopped
+      - grafana_data:/var/lib/grafana/
     environment:
-      TZ: "Europe/Moscow"
+      - 'GF_SECURITY_ADMIN_USER=danik'
+      - 'GF_SECURITY_ADMIN_PASSWORD=qwerty' 
 
   prometheus:
     image: prom/prometheus:latest
+    container_name: prometheus
     volumes:
       - ./prometheus:/etc/prometheus/
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-    container_name: prometheus
     hostname: prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
@@ -31,7 +30,10 @@ services:
       - '--web.console.templates=/etc/prometheus/consoles'
       - '--web.enable-lifecycle'
     ports:
-      - 9090:9090
+      - '9090:9090'
     restart: unless-stopped
     environment:
       TZ: "Europe/Moscow"
+
+volumes:
+  grafana_data:

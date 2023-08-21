@@ -16,7 +16,7 @@
     project_src: '/var/monitoring/'
     state: present
 
-- name: copy prometheus.yaml file
+- name: copy prometheus file
   template:
     src: prometheus.yml.j2 
     dest: '/var/monitoring/prometheus/prometheus.yml'
@@ -32,12 +32,12 @@
 
 - name: Replace Server with {{ ansible_host }}
   replace:
-    path: "/var/monitoring/prometheus/prometheus.yaml"
+    path: "/var/monitoring/prometheus/prometheus.yml"
     regexp: 'targets: \[\:8080\]'
     replace: 'targets: [{{ target_ip }}:8080]'
 
 - name: Replace Server with {{ ansible_host }}
   replace:
-    path: "/var/monitoring/prometheus/prometheus.yaml"
+    path: "/var/monitoring/prometheus/prometheus.yml"
     regexp: 'targets: \[\:9100\]'
     replace: 'targets: [{{ target_ip }}:9100]'

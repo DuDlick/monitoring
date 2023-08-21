@@ -1,4 +1,4 @@
-all: java monitoring
+all: test java monitoring
 
 test:
 	ansible all -m ping

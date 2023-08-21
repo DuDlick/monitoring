@@ -14,7 +14,7 @@ scrape_configs:
     static_configs:
       - targets: [:8080]
 
-  - job_name: node
+  - job_name: 'node_exporter'
     scrape_interval: 5s
     static_configs:
-    - targets: [:9100]
+      - targets: [:9100]
