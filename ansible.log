@@ -15803,3 +15803,63 @@ Should be written as:
 2023-08-21 18:39:04,920 p=11538 u=dudlick n=ansible | changed: [monitoring1]
 2023-08-21 18:39:04,928 p=11538 u=dudlick n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
 2023-08-21 18:39:04,928 p=11538 u=dudlick n=ansible | monitoring1                : ok=15   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-21 22:25:48,773 p=14401 u=dudlick n=ansible | monitoring1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.51.139 port 22: Operation timed out",
+    "unreachable": true
+}
+2023-08-21 22:25:48,774 p=14401 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.51.128 port 22: Operation timed out",
+    "unreachable": true
+}
+2023-08-21 22:25:52,044 p=14623 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0644 for '/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key\": bad permissions\r\nroot@192.168.51.128: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2023-08-21 22:26:01,926 p=14623 u=dudlick n=ansible | monitoring1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.51.139 port 22: Operation timed out",
+    "unreachable": true
+}
+2023-08-21 22:26:39,056 p=14653 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0644 for '/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key\": bad permissions\r\nroot@192.168.51.128: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2023-08-21 22:26:48,939 p=14653 u=dudlick n=ansible | monitoring1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.51.139 port 22: Operation timed out",
+    "unreachable": true
+}
+2023-08-21 22:28:03,371 p=14720 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0644 for '/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"/Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key\": bad permissions\r\nroot@192.168.51.128: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2023-08-21 22:28:13,267 p=14720 u=dudlick n=ansible | monitoring1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.51.139 port 22: Operation timed out",
+    "unreachable": true
+}
+2023-08-21 22:28:35,622 p=14777 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key: Permission denied\r\nroot@192.168.51.128: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2023-08-21 22:28:45,514 p=14777 u=dudlick n=ansible | monitoring1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.51.139 port 22: Operation timed out",
+    "unreachable": true
+}
+2023-08-21 22:28:57,636 p=14794 u=dudlick n=ansible | monitoring1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.51.139 port 22: Host is down",
+    "unreachable": true
+}
+2023-08-21 22:28:57,761 p=14794 u=dudlick n=ansible | prod1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /Users/dudlick/my_dir/projects/monitoring/.ssh/ansible_key: Permission denied\r\nroot@192.168.51.128: Permission denied (publickey,password).",
+    "unreachable": true
+}
