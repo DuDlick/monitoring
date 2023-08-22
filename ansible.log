@@ -15893,3 +15893,11 @@ Should be written as:
     "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.51.139 port 22: Operation timed out",
     "unreachable": true
 }
+2023-08-22 14:00:52,308 p=1894 u=dudlick n=ansible | prod1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-22 14:00:52,311 p=1894 u=dudlick n=ansible | monitoring1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
